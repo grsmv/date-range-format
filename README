@@ -1,0 +1,21 @@
+date-range-format
+-----------------
+
+Formatting date ranges in Go with i18n support (currently for Ukrainian, English and Russian languages).
+Usage:
+
+    import "github.com/grsmv/date-range-format"
+
+    format.DateRangeFormat(
+        "uk",
+        time.Date(2017, 1, 1, 0, 0, 0, 0, time.Local),
+        time.Date(2017, 1, 5, 0, 0, 0, 0, time.Local),
+    ) // will give `1 - 5 січня 2017`
+
+    format.DateRangeFormat(
+        "en",
+        time.Date(2017, 1, 30, 0, 0, 0, 0, time.Local),
+        time.Date(2017, 2, 7, 0, 0, 0, 0, time.Local),
+    ) // will give `January, 30 - February, 7 2017`
+
+Enjoy!
