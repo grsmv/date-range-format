@@ -4,7 +4,7 @@ date-range-format
 Formatting date ranges in Go with i18n support (currently for Ukrainian, English and Russian languages).
 Usage:
 
-    import "github.com/grsmv/date-range-format"
+    import format "github.com/grsmv/date-range-format"
 
     format.DateRangeFormat(
         "uk",
