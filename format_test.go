@@ -15,6 +15,13 @@ type TestCase struct {
 
 var testCases = []TestCase{
 	{
+		"uk-same-date",
+		"uk",
+		time.Date(2017, 1, 1, 0, 0, 0, 0, time.Local),
+		time.Date(2017, 1, 1, 0, 0, 0, 0, time.Local),
+		"1 січня 2017",
+	},
+	{
 		"uk-same-month",
 		"uk",
 		time.Date(2017, 1, 1, 0, 0, 0, 0, time.Local),
@@ -36,6 +43,13 @@ var testCases = []TestCase{
 		"30 грудня 2016 - 6 січня 2017",
 	},
 	{
+		"ru-same-date",
+		"ru",
+		time.Date(2017, 1, 1, 0, 0, 0, 0, time.Local),
+		time.Date(2017, 1, 1, 0, 0, 0, 0, time.Local),
+		"1 января 2017",
+	},
+	{
 		"ru-same-month",
 		"ru",
 		time.Date(2017, 1, 1, 0, 0, 0, 0, time.Local),
@@ -55,6 +69,13 @@ var testCases = []TestCase{
 		time.Date(2016, 12, 30, 0, 0, 0, 0, time.Local),
 		time.Date(2017, 1, 6, 0, 0, 0, 0, time.Local),
 		"30 декабря 2016 - 6 января 2017",
+	},
+	{
+		"en-same-date",
+		"en",
+		time.Date(2017, 1, 1, 0, 0, 0, 0, time.Local),
+		time.Date(2017, 1, 1, 0, 0, 0, 0, time.Local),
+		"January, 1 2017",
 	},
 	{
 		"en-same-month",

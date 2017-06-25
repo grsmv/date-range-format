@@ -11,11 +11,17 @@ func DateRangeFormat(lang string, d1, d2 time.Time) string {
 	var (
 		key    string
 		writer = new(bytes.Buffer)
+
+		sameDayCondition   = d1.Month() == d2.Month() && d1.Year() == d2.Year() && d1.Day() == d2.Day()
+		sameMonthCondition = d1.Month() == d2.Month() && d1.Year() == d2.Year()
+		sameYearCondition  = d1.Year() == d2.Year()
 	)
 
-	if d1.Month() == d2.Month() && d1.Year() == d2.Year() {
+	if sameDayCondition {
+		key = "same-day"
+	} else if sameMonthCondition {
 		key = "same-month"
-	} else if d1.Year() == d2.Year() {
+	} else if sameYearCondition {
 		key = "same-year"
 	} else {
 		key = "different-years"
